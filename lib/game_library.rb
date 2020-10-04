@@ -18,7 +18,7 @@ class GameLibrary
   # file.read means it will read the file in the (), also the data local variable only made so you could use parse to make the contents of the
   # json look nice in Ruby
   def read_user_games
-    data = File.read("#{Dir.home}/Desktop/gamelibrary/public/user_games.json")
+    data = File.read("#{Dir.home}/Desktop/gamelibraryapp/public/user_games.json")
     JSON.parse(data)
   end
 

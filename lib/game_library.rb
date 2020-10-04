@@ -18,7 +18,7 @@ class GameLibrary
   # file.read means it will read the file in the (), also the data local variable only made so you could use parse to make the contents of the
   # json look nice in Ruby
   def read_user_games
-    data = File.read("#{Dir.home}/Desktop/gamelibrary_app/public/user_games.json")
+    data = File.read("#{Dir.home}/Desktop/gamelibrary/public/user_games.json")
     JSON.parse(data)
   end
 
@@ -26,7 +26,7 @@ class GameLibrary
   # IV and all its associated stuff. when commented out, i can add a game to the list and it would stay until i closed the app, but wouldn't save.
   # could translate .write to permanently write something to a file.
   def write_games
-    File.write("#{Dir.home}/Desktop/gamelibrary_app/public/user_games.json", JSON.pretty_generate(@user_games))
+    File.write("#{Dir.home}/Desktop/gamelibraryapp/public/user_games.json", JSON.pretty_generate(@user_games))
   end
 
   def find(title)
